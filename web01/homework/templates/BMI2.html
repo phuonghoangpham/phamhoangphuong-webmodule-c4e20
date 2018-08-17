@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BMI Calculator</title>
+</head>
+<body>
+    <p> Your BMI is {{ BMI }} and {% if BMI < 16 %} you are severely underweight.
+
+        Your BMI is {{ BMI }} and {% elif 16< BMI < 18.5 %} you are underweight.
+
+        Your BMI is {{ BMI }} and {% elif 18.5 < BMI < 25 %} you are normal.
+
+        Your BMI is {{ BMI }} and {% elif 25< BMI < 30 %} you are overweight.
+
+        Your BMI is {{ BMI }} and {% elif 30 < BMI  %} you are obese.
+
+        {% endif %}
+    
+    </p> 
+</body>
+</html>
