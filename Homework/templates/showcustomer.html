@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Customer list</title>
+</head>
+<body>
+    <h1>Customer list</h1>
+        <p>Tên: {{customer.name}}
+        <p>Năm sinh: {{customer.yob}}</p>
+        <p>Giới tính: {{"Nam" if customer.gender == 1 else "Nữ" }} </p>
+        <p>Số điện thoại: {{customer.phone}}</p>
+        <p>Địa chỉ: {{customer.address}}</p>
+        <p>Email: {{customer.email}}</p>
+        <p>Công việc: {{customer.job}}</p>
+        <p>Tình trạng liên hệ: {{"Đã liên hệ" if customer.contacted == True else "Chưa liên hệ"}}</p>
+        <hr>
+    </div>
+</body>
+</html>
