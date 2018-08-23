@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>Customer list</h1>
+    {%for customer in all_customer%}
         <p>Tên: {{customer.name}}
         <p>Năm sinh: {{customer.yob}}</p>
         <p>Giới tính: {{"Nam" if customer.gender == 1 else "Nữ" }} </p>
@@ -17,6 +18,7 @@
         <p>Công việc: {{customer.job}}</p>
         <p>Tình trạng liên hệ: {{"Đã liên hệ" if customer.contacted == True else "Chưa liên hệ"}}</p>
         <hr>
+        {%endfor%}
     </div>
 </body>
 </html>

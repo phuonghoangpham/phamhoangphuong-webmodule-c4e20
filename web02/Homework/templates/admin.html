@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mùa đông không lạnh</title>
+</head>
+<body>
+        <h1>Admin's playground</h1>
+        <table border = "5px">
+        <thead>
+            <th>STT</th>
+            <th>Tên</th>
+            <th>Năm sinh</th>
+            <th>Giới tính</th>
+            <th>SĐT</th>
+            <th>Địa chỉ</th>
+            <th>Email</th>
+            <th>Công việc</th>
+            <th>Tình trạng liên hệ</th>
+            <th></th>
+        </thead>
+        <tbody>
+            {%for customer in all_customer%}
+            <tr>
+                <td>{{loop.index}}</td>
+                <td>{{customer.name}}</td>
+                <td>{{customer.yob}}</td>
+                <td>{{"Nam" if customer.gender == 1 else "Nữ"}}</td>
+                <td>{{customer.phone}}</td>
+                <td>{{customer.address}}</td>
+                <td>{{customer.email}}</td>
+                <td>{{customer.job}}</td>
+                <td>{{"Đã liên hệ" if customer.contacted ==1 else "Chưa liên hệ"}}</td>
+                <td>
+                    <a href="">Sửa</a>
+                    <a href="{{url_for('delete', customer_id = customer.id)}}">Xoá</a>
+                </td>
+            </tr>
+            {%endfor%}
+        </tbody>
+        </table>
+</body>
+</html>
