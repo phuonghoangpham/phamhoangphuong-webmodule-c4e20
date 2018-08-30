@@ -3,8 +3,8 @@ import mlab
 
 mlab.connect()
 
-all_service = Service.objects()
+# all_service = Service.objects()
 
-first_service = all_service[5]
+# first_service = all_service[5]
 
-print(first_service['name'])
+# print(first_service['name'])

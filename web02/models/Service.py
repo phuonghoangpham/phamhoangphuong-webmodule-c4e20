@@ -8,3 +8,6 @@ class Service(Document):  #viet hoa chu cai dau tien cua collection
     phone = StringField ()
     address = StringField()
     status = BooleanField ()
+    description = ListField()
+    measurement = ListField ()
+    image = StringField()
